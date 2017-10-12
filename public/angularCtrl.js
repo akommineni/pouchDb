@@ -44,29 +44,4 @@ angularApp.controller('angularCtrl', ['$scope', 'dbService', function ($scope, d
     };
 
     dbService.connectToServices();
-
-    // setInterval(()=>{
-    //     var d = {
-    //         "id": 8,
-    //         "name":"glove",
-    //         "price":"$4"
-    //     };
-    //     dbService.putRecord(d);
-    // }, 10000);
-
-    // $scope.myData = [
-    //     {
-    //         "firstName": "ajay",
-    //         "lastName": "kommineni"
-    //     }, {
-    //         "firstName": "dhriti",
-    //         "lastName": "kommineni"
-    //     }, {
-    //         "firstName": "sahasra",
-    //         "lastName": "kommineni"
-    //     }, {
-    //         "firstName": "chaitanya",
-    //         "lastName": "govada"
-    //     }
-    // ];
 }]);
