@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="3rdParty/pouchdb-6.3.4.js"></script>
+    <link rel="styleSheet" href="../node_modules/angular-ui-grid/ui-grid.min.css"/>
+    <script src="../node_modules/angular-ui-grid/ui-grid.min.js"></script>
+    <link rel="styleSheet" href="css/app.css"/>
+    <script src="angularApp.js"></script>
+    <script src="angularDbService.js"></script>
+    <script src="angularCtrl.js"></script>
+    <!-- <script src="dbinterface.js"></script> -->
+</head>
+
+<body>
+    <div ng-app="angularApp" ng-controller="angularCtrl">
+        <div >Local Server:{{localServerInfo}}</div>
+        <div>Remote Server:{{remoteServerInfo}}</div>
+        <div>syncStatus:{{syncStatus}}</div>
+        <br/>
+        <br/>
+        <div>Data: (* indicates conflicts)</div>
+        <div ui-grid="{ data: myData }" class="gridClass"></div>
+        <form novalidate>
+            <label>id:<input type="text" ng-model="item._id"></Input></label><br/>
+            <label>name:<input type="text" ng-model="item.name"></Input></label><br/>
+            <label>price:<input type="currency" ng-model="item.price"></Input></label><br/>
+            <input type="submit" ng-click="update(item)" value="save"></input><br/>
+            <lable>Status:{{updateStatus}}</lable>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+var angularApp = angular.module('angularApp',['ui.grid']);
