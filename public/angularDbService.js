@@ -2,8 +2,8 @@ angularApp.service('dbService', ['$http', '$rootScope', '$q', function ($http, $
     "use strict";
     var me = this;
 
-    var db = new PouchDB('sports');
-    var remoteDb = new PouchDB('http://localhost:3000/db/baseball');
+    var db = new PouchDB('catalog');
+    var remoteDb = new PouchDB('http://localhost:3000/db/catalog');
 
     me.records = {};
 

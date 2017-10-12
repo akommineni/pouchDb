@@ -5,7 +5,7 @@ var app = express();
 var http = require('http');
 var request = require('request');
 
-const remoteDbBaseUrl = 'http://127.0.0.1:5984';
+var remoteDbBaseUrl = 'http://127.0.0.1:5984';
 
 
 app.get('/db/**', function(req, res){
